@@ -68,9 +68,11 @@ ol {
 /* navigation */
 .navbar {
 	margin-top: 1rem;
-	border-top: 1px solid rgba(0, 0, 0, 0.1);
 }
-
+.navbar-expand-lg {
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	padding-top: 1.6rem;
+}
 .navbar__item-link {
 	text-decoration: none;
 	color: var(--main-black);
@@ -86,6 +88,7 @@ ol {
 	color: var(--bs-white);
 	background-color: var(--main-color);
 }
+
 /* main */
 
 .main {
@@ -100,13 +103,15 @@ ol {
 	height: 1rem;
 	opacity: 0.1;
 }
-
+.carousel-indicators [data-bs-target]:hover {
+	color: azure;
+	opacity: 1;
+}
 .carousel .carousel-indicators .active {
 	background-color: #e69a37;
 	transition: 0.3s;
 	opacity: 1;
 }
-
 .carousel__inner-container {
 	position: absolute;
 	top: 14rem;
@@ -142,6 +147,7 @@ ol {
 	font-size: 6rem;
 	color: var(--bs-white);
 }
+
 /* description */
 
 .description {
@@ -171,10 +177,12 @@ ol {
 	color: var(--main-color);
 }
 
+/* media */
+
 @media screen and (max-width: 1700px) {
 	.carousel__inner-container {
-		left: 10%;
-		top: 10%;
+		left: 5%;
+		top: 5%;
 	}
 }
 @media screen and (max-width: 1400px) {
@@ -190,21 +198,38 @@ ol {
 	.carousel__inner-container {
 		left: 5rem;
 	}
+	.carousel__inner-container-description-title-title {
+		font-size: 4.5rem;
+	}
+	.carousel__inner-container-description-description {
+		font-size: 2rem;
+	}
 }
 @media screen and (max-width: 1260px) {
 	.carousel__inner-container-description-title-title {
-		font-size: 5rem;
+		font-size: 4.5rem;
 	}
 	.carousel__inner-container-description-description {
 		font-size: 2rem;
 	}
 	.description__item {
-		margin-top: 3rem;
+		margin-top: 2rem;
 	}
 }
 @media screen and (max-width: 1090px) {
 	.carousel__inner-container-description-title-title {
 		font-size: 4rem;
+	}
+}
+@media screen and (max-width: 991px) {
+	.navbar__item-link {
+		padding: 0.5rem;
+	}
+	.carousel__inner-container-description-title-title {
+		font-size: 3.5rem;
+	}
+	.carousel__inner-container-description-description {
+		font-size: 1.8rem;
 	}
 }
 @media screen and (max-width: 875px) {
@@ -252,16 +277,18 @@ ol {
 	}
 }
 @media screen and (max-width: 500px) {
-	.nav__nav {
-		margin-top: 2rem;
-	}
-	.nav__item-link {
-		font-size: 1rem;
-	}
 	.carousel__inner-container-description-title-title {
 		font-size: 1.3rem;
 	}
 	.carousel__inner-container-description-description {
 		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 420px) {
+	.carousel__inner-container-description-title-title {
+		font-size: 1rem;
+	}
+	.carousel__inner-container-description-description {
+		font-size: 0.8rem;
 	}
 }
